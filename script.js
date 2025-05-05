@@ -1,54 +1,61 @@
 const cursors = [
-  { name: "auto", file: "default" },
-  { name: "default" },
-  { name: "none", file: "" },
-  { name: "context-menu" },
-  { name: "help" },
-  { name: "pointer" },
-  { name: "progress", file: "progress_0001" },
-  { name: "wait", file: "wait_0001" },
-  { name: "cell" },
-  { name: "crosshair" },
-  { name: "text" },
-  { name: "vertical-text" },
-  { name: "alias" },
-  { name: "copy" },
-  { name: "move" },
-  { name: "no-drop" },
-  { name: "not-allowed" },
-  { name: "grab" },
-  { name: "grabbing" },
-  { name: "all-scroll" },
-  { name: "col-resize" },
-  { name: "row-resize" },
-  { name: "n-resize" },
-  { name: "e-resize" },
-  { name: "s-resize" },
-  { name: "w-resize" },
-  { name: "ne-resize" },
-  { name: "nw-resize" },
-  { name: "se-resize" },
-  { name: "sw-resize" },
-  { name: "ew-resize" },
-  { name: "ns-resize" },
-  { name: "nesw-resize" },
-  { name: "nwse-resize" },
-  { name: "zoom-in" },
-  { name: "zoom-out" },
+  "auto",
+  "default",
+  "none",
+  "context-menu",
+  "help",
+  "pointer",
+  "progress",
+  "wait",
+  "cell",
+  "crosshair",
+  "text",
+  "vertical-text",
+  "alias",
+  "copy",
+  "move",
+  "no-drop",
+  "not-allowed",
+  "grab",
+  "grabbing",
+  "all-scroll",
+  "col-resize",
+  "row-resize",
+  "n-resize",
+  "e-resize",
+  "s-resize",
+  "w-resize",
+  "ne-resize",
+  "nw-resize",
+  "se-resize",
+  "sw-resize",
+  "ew-resize",
+  "ns-resize",
+  "nesw-resize",
+  "nwse-resize",
+  "zoom-in",
+  "zoom-out",
 ];
+
+const aliases = {
+  auto: "default",
+  progress: "progress_0001",
+  wait: "wait_0001",
+};
+
+const urlPrefix =
+  "https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/48x48/";
 
 window.onload = () => {
   let cursorGrid = "";
 
   cursors.forEach((cursor) => {
     cursorGrid += `
-      <div class="cursor" style="cursor: ${cursor.name}">
-        <div class="cursor-name">${cursor.name}</div>
+      <div class="cursor" style="cursor: ${cursor}">
+        <div class="cursor-name">${cursor}</div>
         <img class="cursor-image" src="${
-          cursor.file !== ""
-            ? `https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/48x48/${
-                cursor.file || cursor.name
-              }.png`
+          cursor !== "none"
+            ? urlPrefix + (aliases[cursor] || cursor) + ".png"
             : ""
         }" />
       </div>
