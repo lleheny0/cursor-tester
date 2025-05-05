@@ -46,7 +46,7 @@ window.onload = () => {
         ${cursor.name}
         <img class="cursor-image" src="${
           cursor.file !== ""
-            ? `https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/24x24/${
+            ? `https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/48x48/${
                 cursor.file || cursor.name
               }.png`
             : ""
