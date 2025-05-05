@@ -43,7 +43,7 @@ window.onload = () => {
   cursors.forEach((cursor) => {
     cursorGrid += `
       <div class="cursor" style="cursor: ${cursor.name}">
-        ${cursor.name}
+        <div class="cursor-name">${cursor.name}</div>
         <img class="cursor-image" src="${
           cursor.file !== ""
             ? `https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/48x48/${

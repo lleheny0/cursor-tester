@@ -18,12 +18,13 @@ body {
 }
 
 .cursor {
-  border: solid #808080 1px;
+  border: solid #404048 1px;
   background-color: #282830;
   border-radius: 4px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .cursor-image {
