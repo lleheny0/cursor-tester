@@ -44,7 +44,7 @@ const aliases = {
 };
 
 const urlPrefix =
-  "https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/48x48/";
+  "https://raw.githubusercontent.com/GNOME/adwaita-icon-theme/refs/heads/master/src/cursors/pngs/96x96/";
 
 window.onload = () => {
   let cursorGrid = "";

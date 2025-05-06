@@ -28,7 +28,7 @@ body {
 }
 
 .cursor-image {
-  width: auto;
+  width: 48px;
   border: none;
   margin: auto;
 }
